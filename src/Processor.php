@@ -1,21 +1,52 @@
 <?php
 
+/*
+ * This file is part of Basket.
+ *
+ * (c) DraperStudio <hello@draperstudio.tech>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace DraperStudio\Basket;
 
 use DraperStudio\Basket\Contracts\Reconciler;
 
+/**
+ * Class Processor.
+ *
+ * @author DraperStudio <hello@draperstudio.tech>
+ */
 class Processor
 {
+    /**
+     * @var Reconciler
+     */
     private $reconciler;
 
+    /**
+     * @var array
+     */
     private $metadata;
 
+    /**
+     * Processor constructor.
+     *
+     * @param Reconciler $reconciler
+     * @param array      $metadata
+     */
     public function __construct(Reconciler $reconciler, $metadata = [])
     {
         $this->reconciler = $reconciler;
         $this->metadata = $metadata;
     }
 
+    /**
+     * @param Basket $basket
+     *
+     * @return Order
+     */
     public function process(Basket $basket)
     {
         $this->discount($basket);
@@ -26,6 +57,9 @@ class Processor
         return new Order($meta, $products);
     }
 
+    /**
+     * @param Basket $basket
+     */
     public function discount(Basket $basket)
     {
         if ($basket->discount) {
@@ -37,6 +71,11 @@ class Processor
         }
     }
 
+    /**
+     * @param Basket $basket
+     *
+     * @return array
+     */
     public function meta(Basket $basket)
     {
         $meta = [];
@@ -48,6 +87,11 @@ class Processor
         return $meta;
     }
 
+    /**
+     * @param Basket $basket
+     *
+     * @return array
+     */
     public function products(Basket $basket)
     {
         $products = [];

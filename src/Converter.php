@@ -1,5 +1,14 @@
 <?php
 
+/*
+ * This file is part of Basket.
+ *
+ * (c) DraperStudio <hello@draperstudio.tech>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace DraperStudio\Basket;
 
 use DraperStudio\Basket\Formatters\CategoryFormatter;
@@ -9,10 +18,23 @@ use DraperStudio\Basket\Formatters\MoneyFormatter;
 use DraperStudio\Basket\Formatters\PercentFormatter;
 use DraperStudio\Basket\Formatters\TaxRateFormatter;
 
+/**
+ * Class Converter.
+ *
+ * @author DraperStudio <hello@draperstudio.tech>
+ */
 class Converter
 {
+    /**
+     * @var array
+     */
     private $formatters;
 
+    /**
+     * Converter constructor.
+     *
+     * @param array $formatters
+     */
     public function __construct(array $formatters = [])
     {
         $bootstrap = [
@@ -29,6 +51,11 @@ class Converter
         $this->formatters = array_merge($bootstrap, $formatters);
     }
 
+    /**
+     * @param $value
+     *
+     * @return array
+     */
     public function convert($value)
     {
         if (!is_object($value)) {
@@ -44,6 +71,11 @@ class Converter
         return $this->formatter($value)->format($value);
     }
 
+    /**
+     * @param $object
+     *
+     * @return mixed
+     */
     public function formatter($object)
     {
         $interfaces = class_implements($object);
@@ -67,6 +99,11 @@ class Converter
         return $this->formatters[$class];
     }
 
+    /**
+     * @param $namespace
+     *
+     * @return mixed
+     */
     private function getClassName($namespace)
     {
         $namespace = explode('\\', $namespace);

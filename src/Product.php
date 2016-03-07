@@ -1,5 +1,14 @@
 <?php
 
+/*
+ * This file is part of Basket.
+ *
+ * (c) DraperStudio <hello@draperstudio.tech>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace DraperStudio\Basket;
 
 use Closure;
@@ -8,32 +17,81 @@ use DraperStudio\Basket\Contracts\Discount;
 use DraperStudio\Basket\Contracts\TaxRate;
 use Money\Money;
 
+/**
+ * Class Product.
+ *
+ * @author DraperStudio <hello@draperstudio.tech>
+ */
 class Product
 {
+    /**
+     * @var
+     */
     private $sku;
 
+    /**
+     * @var
+     */
     private $name;
 
+    /**
+     * @var Money
+     */
     private $price;
 
+    /**
+     * @var TaxRate
+     */
     private $rate;
 
+    /**
+     * @var int
+     */
     private $quantity;
 
+    /**
+     * @var bool
+     */
     private $freebie;
 
+    /**
+     * @var bool
+     */
     private $taxable;
 
+    /**
+     * @var Money
+     */
     private $delivery;
 
+    /**
+     * @var Collection
+     */
     private $coupons;
 
+    /**
+     * @var Collection
+     */
     private $tags;
 
+    /**
+     * @var Collection
+     */
     private $discounts;
 
+    /**
+     * @var
+     */
     private $category;
 
+    /**
+     * Product constructor.
+     *
+     * @param $sku
+     * @param $name
+     * @param Money   $price
+     * @param TaxRate $rate
+     */
     public function __construct($sku, $name, Money $price, TaxRate $rate)
     {
         $this->sku = $sku;
@@ -49,31 +107,49 @@ class Product
         $this->discounts = new Collection();
     }
 
+    /**
+     * @param $quantity
+     */
     public function quantity($quantity)
     {
         $this->quantity = $quantity;
     }
 
+    /**
+     *
+     */
     public function increment()
     {
         ++$this->quantity;
     }
 
+    /**
+     *
+     */
     public function decrement()
     {
         --$this->quantity;
     }
 
+    /**
+     * @param $status
+     */
     public function freebie($status)
     {
         $this->freebie = $status;
     }
 
+    /**
+     * @param $status
+     */
     public function taxable($status)
     {
         $this->taxable = $status;
     }
 
+    /**
+     * @param Money $delivery
+     */
     public function delivery(Money $delivery)
     {
         if ($this->price->isSameCurrency($delivery)) {
@@ -81,21 +157,33 @@ class Product
         }
     }
 
+    /**
+     * @param Coupon $coupon
+     */
     public function coupon(Coupon $coupon)
     {
         $this->coupons->push($coupon);
     }
 
+    /**
+     * @param $tag
+     */
     public function tags($tag)
     {
         $this->tags->push($tag);
     }
 
+    /**
+     * @param Discount $discount
+     */
     public function discount(Discount $discount)
     {
         $this->discounts->add(0, $discount);
     }
 
+    /**
+     * @param Category $category
+     */
     public function category(Category $category)
     {
         $this->category = $category;
@@ -103,11 +191,19 @@ class Product
         $this->category->categorise($this);
     }
 
+    /**
+     * @param Closure $actions
+     */
     public function action(Closure $actions)
     {
         call_user_func($actions, $this);
     }
 
+    /**
+     * @param $key
+     *
+     * @return mixed
+     */
     public function __get($key)
     {
         if (property_exists($this, $key)) {

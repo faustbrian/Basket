@@ -1,18 +1,42 @@
 <?php
 
+/*
+ * This file is part of Basket.
+ *
+ * (c) DraperStudio <hello@draperstudio.tech>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace DraperStudio\Basket\Reconcilers;
 
 use DraperStudio\Basket\Contracts\Reconciler;
 use DraperStudio\Basket\Product;
 use Money\Money;
 
+/**
+ * Class DefaultReconciler.
+ *
+ * @author DraperStudio <hello@draperstudio.tech>
+ */
 class DefaultReconciler implements Reconciler
 {
+    /**
+     * @param Product $product
+     *
+     * @return mixed
+     */
     public function value(Product $product)
     {
         return $product->price->multiply($product->quantity);
     }
 
+    /**
+     * @param Product $product
+     *
+     * @return Money
+     */
     public function discount(Product $product)
     {
         $discountTotal = $this->money($product);
@@ -41,6 +65,11 @@ class DefaultReconciler implements Reconciler
         return $discountTotal;
     }
 
+    /**
+     * @param Product $product
+     *
+     * @return mixed
+     */
     public function delivery(Product $product)
     {
         $delivery = $product->delivery->multiply($product->quantity);
@@ -48,6 +77,11 @@ class DefaultReconciler implements Reconciler
         return $delivery;
     }
 
+    /**
+     * @param Product $product
+     *
+     * @return Money
+     */
     public function tax(Product $product)
     {
         $tax = $this->money($product);
@@ -65,6 +99,11 @@ class DefaultReconciler implements Reconciler
         return $tax;
     }
 
+    /**
+     * @param Product $product
+     *
+     * @return Money
+     */
     public function subtotal(Product $product)
     {
         $subtotal = $this->money($product);
@@ -81,6 +120,11 @@ class DefaultReconciler implements Reconciler
         return $subtotal;
     }
 
+    /**
+     * @param Product $product
+     *
+     * @return mixed
+     */
     public function total(Product $product)
     {
         $tax = $this->tax($product);
@@ -90,6 +134,11 @@ class DefaultReconciler implements Reconciler
         return $total;
     }
 
+    /**
+     * @param Product $product
+     *
+     * @return Money
+     */
     private function money(Product $product)
     {
         return new Money(0, $product->price->getCurrency());

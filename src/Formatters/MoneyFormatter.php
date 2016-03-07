@@ -1,5 +1,14 @@
 <?php
 
+/*
+ * This file is part of Basket.
+ *
+ * (c) DraperStudio <hello@draperstudio.tech>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace DraperStudio\Basket\Formatters;
 
 use DraperStudio\Basket\Contracts\Formatter;
@@ -8,21 +17,42 @@ use Locale;
 use Money\Money;
 use NumberFormatter;
 
+/**
+ * Class MoneyFormatter.
+ *
+ * @author DraperStudio <hello@draperstudio.tech>
+ */
 class MoneyFormatter implements Formatter
 {
+    /**
+     * @var null
+     */
     private $locale;
 
+    /**
+     * @var
+     */
     private static $currencies;
 
+    /**
+     * MoneyFormatter constructor.
+     *
+     * @param null $locale
+     */
     public function __construct($locale = null)
     {
         $this->locale = $locale;
 
         if (!isset(static::$currencies)) {
-            static::$currencies = json_read(__DIR__.'/../../data/currencies.json');
+            static::$currencies = json_read(__DIR__.'/../../resources/data/currencies.json');
         }
     }
 
+    /**
+     * @param $value
+     *
+     * @return string
+     */
     public function format($value)
     {
         $formatter = new NumberFormatter($this->locale(), NumberFormatter::CURRENCY);
@@ -38,6 +68,9 @@ class MoneyFormatter implements Formatter
         return $formatter->formatCurrency($amount, $code);
     }
 
+    /**
+     * @return null|string
+     */
     private function locale()
     {
         if ($this->locale) {
@@ -47,16 +80,32 @@ class MoneyFormatter implements Formatter
         return Locale::getDefault();
     }
 
+    /**
+     * @param Money $value
+     *
+     * @return mixed
+     */
     private function code(Money $value)
     {
         return $value->getCurrency()->getName();
     }
 
+    /**
+     * @param $code
+     *
+     * @return mixed
+     */
     private function divisor($code)
     {
         return static::$currencies->$code->subunit_to_unit;
     }
 
+    /**
+     * @param Money $money
+     * @param $divisor
+     *
+     * @return string
+     */
     private function convert(Money $money, $divisor)
     {
         return number_format(($money->getAmount() / $divisor), 2, '.', '');
