@@ -211,9 +211,6 @@ class Collection implements Countable, IteratorAggregate
         uasort($this->items, $callback);
     }
 
-    /**
-     *
-     */
     public function values()
     {
         $this->items = array_values($this->items);

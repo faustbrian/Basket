@@ -11,14 +11,12 @@
 
 namespace DraperStudio\Tests\Basket;
 
-use GrahamCampbell\TestBench\AbstractPackageTestCase;
-
 /**
- * This is the abstract test case class.
- *
- * @author DraperStudio <hello@draperstudio.tech>
- */
+  * This is the abstract test case class.
+  *
+  * @author DraperStudio <hello@draperstudio.tech>
+  */
  abstract class AbstractTestCase extends \PHPUnit_Framework_TestCase
-{
-    //
-}
+ {
+     //
+ }

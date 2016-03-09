@@ -115,17 +115,11 @@ class Product
         $this->quantity = $quantity;
     }
 
-    /**
-     *
-     */
     public function increment()
     {
         ++$this->quantity;
     }
 
-    /**
-     *
-     */
     public function decrement()
     {
         --$this->quantity;
