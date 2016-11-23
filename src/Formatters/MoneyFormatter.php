@@ -1,5 +1,14 @@
 <?php
 
+/*
+ * This file is part of Basket.
+ *
+ * (c) Brian Faust <hello@brianfaust.de>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace BrianFaust\Basket\Formatters;
 
 use BrianFaust\Basket\Contracts\Formatter;
@@ -29,7 +38,7 @@ class MoneyFormatter implements Formatter
     {
         $this->locale = $locale;
 
-        if (!isset(static::$currencies)) {
+        if (! isset(static::$currencies)) {
             static::$currencies = json_read(__DIR__.'/../../resources/data/currencies.json');
         }
     }

@@ -1,5 +1,14 @@
 <?php
 
+/*
+ * This file is part of Basket.
+ *
+ * (c) Brian Faust <hello@brianfaust.de>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace BrianFaust\Basket\Reconcilers;
 
 use BrianFaust\Basket\Contracts\Reconciler;
@@ -72,7 +81,7 @@ class DefaultReconciler implements Reconciler
     {
         $tax = $this->money($product);
 
-        if (!$product->taxable || $product->freebie) {
+        if (! $product->taxable || $product->freebie) {
             return $tax;
         }
 
@@ -94,7 +103,7 @@ class DefaultReconciler implements Reconciler
     {
         $subtotal = $this->money($product);
 
-        if (!$product->freebie) {
+        if (! $product->freebie) {
             $value = $this->value($product);
             $discount = $this->discount($product);
             $subtotal = $subtotal->add($value)->subtract($discount);
