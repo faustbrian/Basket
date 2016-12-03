@@ -11,9 +11,9 @@
 
 namespace BrianFaust\Basket;
 
-use Closure;
 use BrianFaust\Basket\Contracts\Discount;
 use BrianFaust\Basket\Contracts\Jurisdiction;
+use Closure;
 
 class Basket
 {

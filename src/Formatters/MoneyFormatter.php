@@ -38,7 +38,7 @@ class MoneyFormatter implements Formatter
     {
         $this->locale = $locale;
 
-        if (! isset(static::$currencies)) {
+        if (!isset(static::$currencies)) {
             static::$currencies = json_read(__DIR__.'/../../resources/data/currencies.json');
         }
     }
