@@ -33,14 +33,14 @@ class Converter
     public function __construct(array $formatters = [])
     {
         $bootstrap = [
-            'Category' => new CategoryFormatter(),
-            'Collection' => new CollectionFormatter(),
-            'Coupon' => new CouponFormatter(),
-            'Money' => new MoneyFormatter(),
-            'Percent' => new PercentFormatter(),
+            'Category'           => new CategoryFormatter(),
+            'Collection'         => new CollectionFormatter(),
+            'Coupon'             => new CouponFormatter(),
+            'Money'              => new MoneyFormatter(),
+            'Percent'            => new PercentFormatter(),
             'PercentageDiscount' => new PercentFormatter(),
-            'TaxRate' => new TaxRateFormatter(),
-            'ValueDiscount' => new MoneyFormatter(),
+            'TaxRate'            => new TaxRateFormatter(),
+            'ValueDiscount'      => new MoneyFormatter(),
         ];
 
         $this->formatters = array_merge($bootstrap, $formatters);
@@ -53,7 +53,7 @@ class Converter
      */
     public function convert($value)
     {
-        if (! is_object($value)) {
+        if (!is_object($value)) {
             return $value;
         }
 
