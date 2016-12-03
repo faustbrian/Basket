@@ -34,7 +34,7 @@ class PuertoRicoValueAddedTax implements TaxRate
     /**
      * PuertoRicoValueAddedTax constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->rate = 0.0105;
     }

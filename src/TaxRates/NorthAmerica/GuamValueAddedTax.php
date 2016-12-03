@@ -34,7 +34,7 @@ class GuamValueAddedTax implements TaxRate
     /**
      * GuamValueAddedTax constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->rate = 0.04;
     }

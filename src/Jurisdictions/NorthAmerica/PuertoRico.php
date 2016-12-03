@@ -42,7 +42,7 @@ class PuertoRico implements Jurisdiction
     /**
      * PuertoRico constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->tax = new PuertoRicoValueAddedTax();
         $this->currency = new Currency('USD');

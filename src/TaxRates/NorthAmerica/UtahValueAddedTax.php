@@ -34,7 +34,7 @@ class UtahValueAddedTax implements TaxRate
     /**
      * UtahValueAddedTax constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->rate = 0.0595;
     }

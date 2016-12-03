@@ -42,7 +42,7 @@ class Illinois implements Jurisdiction
     /**
      * Illinois constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->tax = new IllinoisValueAddedTax();
         $this->currency = new Currency('USD');

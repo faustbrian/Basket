@@ -34,7 +34,7 @@ class LatviaValueAddedTax implements TaxRate
     /**
      * LatviaValueAddedTax constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->rate = 0.21;
     }

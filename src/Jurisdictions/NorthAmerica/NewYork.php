@@ -42,7 +42,7 @@ class NewYork implements Jurisdiction
     /**
      * NewYork constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->tax = new NewYorkValueAddedTax();
         $this->currency = new Currency('USD');

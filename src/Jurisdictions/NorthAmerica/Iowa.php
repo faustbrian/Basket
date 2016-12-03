@@ -42,7 +42,7 @@ class Iowa implements Jurisdiction
     /**
      * Iowa constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->tax = new IowaValueAddedTax();
         $this->currency = new Currency('USD');

@@ -42,7 +42,7 @@ class Hungary implements Jurisdiction
     /**
      * Hungary constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->tax = new HungaryValueAddedTax();
         $this->currency = new Currency('HUF');

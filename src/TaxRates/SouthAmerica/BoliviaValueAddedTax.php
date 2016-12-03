@@ -34,7 +34,7 @@ class BoliviaValueAddedTax implements TaxRate
     /**
      * BoliviaValueAddedTax constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->rate = 0.13;
     }

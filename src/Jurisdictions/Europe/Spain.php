@@ -42,7 +42,7 @@ class Spain implements Jurisdiction
     /**
      * Spain constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->tax = new SpainValueAddedTax();
         $this->currency = new Currency('EUR');

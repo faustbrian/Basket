@@ -34,7 +34,7 @@ class SlovakiaValueAddedTax implements TaxRate
     /**
      * SlovakiaValueAddedTax constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->rate = 0.20;
     }

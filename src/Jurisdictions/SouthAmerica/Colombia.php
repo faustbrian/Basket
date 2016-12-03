@@ -42,7 +42,7 @@ class Colombia implements Jurisdiction
     /**
      * Colombia constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->tax = new ColombiaValueAddedTax();
         $this->currency = new Currency('COP');

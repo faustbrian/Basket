@@ -34,7 +34,7 @@ class NewYorkValueAddedTax implements TaxRate
     /**
      * NewYorkValueAddedTax constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->rate = 0.04;
     }

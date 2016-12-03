@@ -34,7 +34,7 @@ class DelawareValueAddedTax implements TaxRate
     /**
      * DelawareValueAddedTax constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->rate = 0.00;
     }

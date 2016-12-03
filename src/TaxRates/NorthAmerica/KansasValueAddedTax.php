@@ -34,7 +34,7 @@ class KansasValueAddedTax implements TaxRate
     /**
      * KansasValueAddedTax constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->rate = 0.0615;
     }

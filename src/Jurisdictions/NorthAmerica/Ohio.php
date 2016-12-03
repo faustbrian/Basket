@@ -42,7 +42,7 @@ class Ohio implements Jurisdiction
     /**
      * Ohio constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->tax = new OhioValueAddedTax();
         $this->currency = new Currency('USD');

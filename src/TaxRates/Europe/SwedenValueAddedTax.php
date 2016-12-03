@@ -34,7 +34,7 @@ class SwedenValueAddedTax implements TaxRate
     /**
      * SwedenValueAddedTax constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->rate = 0.25;
     }

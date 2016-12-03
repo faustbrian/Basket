@@ -34,7 +34,7 @@ class SouthCarolinaValueAddedTax implements TaxRate
     /**
      * SouthCarolinaValueAddedTax constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->rate = 0.06;
     }

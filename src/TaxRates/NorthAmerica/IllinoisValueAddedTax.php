@@ -34,7 +34,7 @@ class IllinoisValueAddedTax implements TaxRate
     /**
      * IllinoisValueAddedTax constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->rate = 0.0625;
     }

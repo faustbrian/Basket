@@ -42,7 +42,7 @@ class Poland implements Jurisdiction
     /**
      * Poland constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->tax = new PolandValueAddedTax();
         $this->currency = new Currency('PLN');

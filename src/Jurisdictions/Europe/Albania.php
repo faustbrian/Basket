@@ -42,7 +42,7 @@ class Albania implements Jurisdiction
     /**
      * Albania constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->tax = new AlbaniaValueAddedTax();
         $this->currency = new Currency('ALL');

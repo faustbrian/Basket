@@ -42,7 +42,7 @@ class Belgium implements Jurisdiction
     /**
      * Belgium constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->tax = new BelgiumValueAddedTax();
         $this->currency = new Currency('EUR');

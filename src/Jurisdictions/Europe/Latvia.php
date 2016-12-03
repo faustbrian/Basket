@@ -42,7 +42,7 @@ class Latvia implements Jurisdiction
     /**
      * Latvia constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->tax = new LatviaValueAddedTax();
         $this->currency = new Currency('EUR');

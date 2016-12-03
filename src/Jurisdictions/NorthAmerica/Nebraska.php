@@ -42,7 +42,7 @@ class Nebraska implements Jurisdiction
     /**
      * Nebraska constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->tax = new NebraskaValueAddedTax();
         $this->currency = new Currency('USD');

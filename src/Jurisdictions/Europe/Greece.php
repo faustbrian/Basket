@@ -42,7 +42,7 @@ class Greece implements Jurisdiction
     /**
      * Greece constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->tax = new GreeceValueAddedTax();
         $this->currency = new Currency('EUR');

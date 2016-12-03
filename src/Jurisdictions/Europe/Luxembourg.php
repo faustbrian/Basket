@@ -42,7 +42,7 @@ class Luxembourg implements Jurisdiction
     /**
      * Luxembourg constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->tax = new LuxembourgValueAddedTax();
         $this->currency = new Currency('EUR');

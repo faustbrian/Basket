@@ -42,7 +42,7 @@ class Alaska implements Jurisdiction
     /**
      * Alaska constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->tax = new AlaskaValueAddedTax();
         $this->currency = new Currency('USD');

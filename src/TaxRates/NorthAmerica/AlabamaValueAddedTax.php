@@ -34,7 +34,7 @@ class AlabamaValueAddedTax implements TaxRate
     /**
      * AlabamaValueAddedTax constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->rate = 0.04;
     }

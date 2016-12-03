@@ -34,7 +34,7 @@ class MarylandValueAddedTax implements TaxRate
     /**
      * MarylandValueAddedTax constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->rate = 0.06;
     }

@@ -42,7 +42,7 @@ class Utah implements Jurisdiction
     /**
      * Utah constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->tax = new UtahValueAddedTax();
         $this->currency = new Currency('USD');

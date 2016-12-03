@@ -42,7 +42,7 @@ class Norway implements Jurisdiction
     /**
      * Norway constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->tax = new NorwayValueAddedTax();
         $this->currency = new Currency('NOK');

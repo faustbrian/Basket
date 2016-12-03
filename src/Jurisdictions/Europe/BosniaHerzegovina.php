@@ -42,7 +42,7 @@ class BosniaHerzegovina implements Jurisdiction
     /**
      * BosniaHerzegovina constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->tax = new BosniaHerzegovinaValueAddedTax();
         $this->currency = new Currency('BAM');

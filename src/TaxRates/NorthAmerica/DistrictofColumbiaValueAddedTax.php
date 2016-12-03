@@ -34,7 +34,7 @@ class DistrictofColumbiaValueAddedTax implements TaxRate
     /**
      * DistrictofColumbiaValueAddedTax constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->rate = 0.0575;
     }

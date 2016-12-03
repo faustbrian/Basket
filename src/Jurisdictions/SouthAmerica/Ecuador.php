@@ -42,7 +42,7 @@ class Ecuador implements Jurisdiction
     /**
      * Ecuador constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->tax = new EcuadorValueAddedTax();
         $this->currency = new Currency('USD');

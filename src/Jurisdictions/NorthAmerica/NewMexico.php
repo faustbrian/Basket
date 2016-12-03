@@ -42,7 +42,7 @@ class NewMexico implements Jurisdiction
     /**
      * NewMexico constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->tax = new NewMexicoValueAddedTax();
         $this->currency = new Currency('USD');

@@ -42,7 +42,7 @@ class Malta implements Jurisdiction
     /**
      * Malta constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->tax = new MaltaValueAddedTax();
         $this->currency = new Currency('EUR');

@@ -42,7 +42,7 @@ class Guyana implements Jurisdiction
     /**
      * Guyana constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->tax = new GuyanaValueAddedTax();
         $this->currency = new Currency('GYD');

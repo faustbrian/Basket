@@ -42,7 +42,7 @@ class Kentucky implements Jurisdiction
     /**
      * Kentucky constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->tax = new KentuckyValueAddedTax();
         $this->currency = new Currency('USD');

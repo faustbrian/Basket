@@ -34,7 +34,7 @@ class GermanyValueAddedTax implements TaxRate
     /**
      * GermanyValueAddedTax constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->rate = 0.19;
     }

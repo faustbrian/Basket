@@ -42,7 +42,7 @@ class Switzerland implements Jurisdiction
     /**
      * Switzerland constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->tax = new SwitzerlandValueAddedTax();
         $this->currency = new Currency('CHF');

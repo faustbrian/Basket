@@ -34,7 +34,7 @@ class WisconsinValueAddedTax implements TaxRate
     /**
      * WisconsinValueAddedTax constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->rate = 0.05;
     }

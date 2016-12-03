@@ -42,7 +42,7 @@ class Wisconsin implements Jurisdiction
     /**
      * Wisconsin constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->tax = new WisconsinValueAddedTax();
         $this->currency = new Currency('USD');

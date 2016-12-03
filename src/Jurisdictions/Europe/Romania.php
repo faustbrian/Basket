@@ -42,7 +42,7 @@ class Romania implements Jurisdiction
     /**
      * Romania constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->tax = new RomaniaValueAddedTax();
         $this->currency = new Currency('RON');

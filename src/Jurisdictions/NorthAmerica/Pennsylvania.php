@@ -42,7 +42,7 @@ class Pennsylvania implements Jurisdiction
     /**
      * Pennsylvania constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->tax = new PennsylvaniaValueAddedTax();
         $this->currency = new Currency('USD');

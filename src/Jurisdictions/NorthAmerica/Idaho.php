@@ -42,7 +42,7 @@ class Idaho implements Jurisdiction
     /**
      * Idaho constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->tax = new IdahoValueAddedTax();
         $this->currency = new Currency('USD');

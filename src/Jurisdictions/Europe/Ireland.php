@@ -42,7 +42,7 @@ class Ireland implements Jurisdiction
     /**
      * Ireland constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->tax = new IrelandValueAddedTax();
         $this->currency = new Currency('EUR');

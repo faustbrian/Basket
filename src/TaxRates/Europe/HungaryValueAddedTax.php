@@ -34,7 +34,7 @@ class HungaryValueAddedTax implements TaxRate
     /**
      * HungaryValueAddedTax constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->rate = 0.27;
     }

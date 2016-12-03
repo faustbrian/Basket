@@ -34,7 +34,7 @@ class NevadaValueAddedTax implements TaxRate
     /**
      * NevadaValueAddedTax constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->rate = 0.0685;
     }

@@ -42,7 +42,7 @@ class Delaware implements Jurisdiction
     /**
      * Delaware constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->tax = new DelawareValueAddedTax();
         $this->currency = new Currency('USD');

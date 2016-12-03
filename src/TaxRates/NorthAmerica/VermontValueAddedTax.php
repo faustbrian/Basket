@@ -34,7 +34,7 @@ class VermontValueAddedTax implements TaxRate
     /**
      * VermontValueAddedTax constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->rate = 0.06;
     }

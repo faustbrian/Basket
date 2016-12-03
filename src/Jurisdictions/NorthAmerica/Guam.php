@@ -42,7 +42,7 @@ class Guam implements Jurisdiction
     /**
      * Guam constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->tax = new GuamValueAddedTax();
         $this->currency = new Currency('USD');

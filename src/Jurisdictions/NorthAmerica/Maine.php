@@ -42,7 +42,7 @@ class Maine implements Jurisdiction
     /**
      * Maine constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->tax = new MaineValueAddedTax();
         $this->currency = new Currency('USD');

@@ -34,7 +34,7 @@ class AustriaValueAddedTax implements TaxRate
     /**
      * AustriaValueAddedTax constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->rate = 0.20;
     }

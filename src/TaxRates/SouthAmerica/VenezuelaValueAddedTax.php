@@ -34,7 +34,7 @@ class VenezuelaValueAddedTax implements TaxRate
     /**
      * VenezuelaValueAddedTax constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->rate = 0.12;
     }

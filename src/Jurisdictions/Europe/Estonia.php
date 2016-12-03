@@ -42,7 +42,7 @@ class Estonia implements Jurisdiction
     /**
      * Estonia constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->tax = new EstoniaValueAddedTax();
         $this->currency = new Currency('EUR');

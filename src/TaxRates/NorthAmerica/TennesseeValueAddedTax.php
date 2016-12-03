@@ -34,7 +34,7 @@ class TennesseeValueAddedTax implements TaxRate
     /**
      * TennesseeValueAddedTax constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->rate = 0.07;
     }

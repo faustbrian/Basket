@@ -42,7 +42,7 @@ class Florida implements Jurisdiction
     /**
      * Florida constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->tax = new FloridaValueAddedTax();
         $this->currency = new Currency('USD');

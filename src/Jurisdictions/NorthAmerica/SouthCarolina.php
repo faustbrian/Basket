@@ -42,7 +42,7 @@ class SouthCarolina implements Jurisdiction
     /**
      * SouthCarolina constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->tax = new SouthCarolinaValueAddedTax();
         $this->currency = new Currency('USD');

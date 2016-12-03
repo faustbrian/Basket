@@ -42,7 +42,7 @@ class Uruguay implements Jurisdiction
     /**
      * Uruguay constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->tax = new UruguayValueAddedTax();
         $this->currency = new Currency('UYU');

@@ -34,7 +34,7 @@ class MaineValueAddedTax implements TaxRate
     /**
      * MaineValueAddedTax constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->rate = 0.055;
     }

@@ -34,7 +34,7 @@ class MontenegroValueAddedTax implements TaxRate
     /**
      * MontenegroValueAddedTax constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->rate = 0.17;
     }

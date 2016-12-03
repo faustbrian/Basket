@@ -34,7 +34,7 @@ class BelgiumValueAddedTax implements TaxRate
     /**
      * BelgiumValueAddedTax constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->rate = 0.21;
     }

@@ -34,7 +34,7 @@ class ArizonaValueAddedTax implements TaxRate
     /**
      * ArizonaValueAddedTax constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->rate = 0.056;
     }

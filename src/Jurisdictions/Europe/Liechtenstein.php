@@ -42,7 +42,7 @@ class Liechtenstein implements Jurisdiction
     /**
      * Liechtenstein constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->tax = new LiechtensteinValueAddedTax();
         $this->currency = new Currency('CHF');

@@ -42,7 +42,7 @@ class Denmark implements Jurisdiction
     /**
      * Denmark constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->tax = new DenmarkValueAddedTax();
         $this->currency = new Currency('DKK');

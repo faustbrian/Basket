@@ -34,7 +34,7 @@ class WashingtonValueAddedTax implements TaxRate
     /**
      * WashingtonValueAddedTax constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->rate = 0.065;
     }

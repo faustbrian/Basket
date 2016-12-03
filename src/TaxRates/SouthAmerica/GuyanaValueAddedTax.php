@@ -34,7 +34,7 @@ class GuyanaValueAddedTax implements TaxRate
     /**
      * GuyanaValueAddedTax constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->rate = 0.16;
     }

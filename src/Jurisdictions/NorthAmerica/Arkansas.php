@@ -42,7 +42,7 @@ class Arkansas implements Jurisdiction
     /**
      * Arkansas constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->tax = new ArkansasValueAddedTax();
         $this->currency = new Currency('USD');

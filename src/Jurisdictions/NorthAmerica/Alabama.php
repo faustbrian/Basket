@@ -42,7 +42,7 @@ class Alabama implements Jurisdiction
     /**
      * Alabama constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->tax = new AlabamaValueAddedTax();
         $this->currency = new Currency('USD');

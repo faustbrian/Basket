@@ -42,7 +42,7 @@ class Mississippi implements Jurisdiction
     /**
      * Mississippi constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->tax = new MississippiValueAddedTax();
         $this->currency = new Currency('USD');

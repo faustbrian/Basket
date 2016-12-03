@@ -34,7 +34,7 @@ class OklahomaValueAddedTax implements TaxRate
     /**
      * OklahomaValueAddedTax constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->rate = 0.045;
     }

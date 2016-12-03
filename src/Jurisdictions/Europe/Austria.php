@@ -42,7 +42,7 @@ class Austria implements Jurisdiction
     /**
      * Austria constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->tax = new AustriaValueAddedTax();
         $this->currency = new Currency('EUR');

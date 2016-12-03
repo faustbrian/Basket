@@ -42,7 +42,7 @@ class Russia implements Jurisdiction
     /**
      * Russia constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->tax = new RussiaValueAddedTax();
         $this->currency = new Currency('RUB');

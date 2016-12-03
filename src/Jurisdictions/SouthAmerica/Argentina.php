@@ -42,7 +42,7 @@ class Argentina implements Jurisdiction
     /**
      * Argentina constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->tax = new ArgentinaValueAddedTax();
         $this->currency = new Currency('ARS');

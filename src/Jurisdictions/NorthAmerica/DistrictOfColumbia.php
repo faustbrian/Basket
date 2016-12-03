@@ -42,7 +42,7 @@ class DistrictOfColumbia implements Jurisdiction
     /**
      * DistrictOfColumbia constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->tax = new DistrictOfColumbiaValueAddedTax();
         $this->currency = new Currency('USD');

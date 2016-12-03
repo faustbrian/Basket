@@ -42,7 +42,7 @@ class Serbia implements Jurisdiction
     /**
      * Serbia constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->tax = new SerbiaValueAddedTax();
         $this->currency = new Currency('RSD');

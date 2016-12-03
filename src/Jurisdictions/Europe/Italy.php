@@ -42,7 +42,7 @@ class Italy implements Jurisdiction
     /**
      * Italy constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->tax = new ItalyValueAddedTax();
         $this->currency = new Currency('EUR');

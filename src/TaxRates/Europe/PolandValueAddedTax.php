@@ -34,7 +34,7 @@ class PolandValueAddedTax implements TaxRate
     /**
      * PolandValueAddedTax constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $this->rate = 0.23;
     }
