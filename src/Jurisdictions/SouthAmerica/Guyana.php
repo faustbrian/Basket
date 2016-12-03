@@ -9,9 +9,12 @@
  * file that was distributed with this source code.
  */
 
+declare(strict_types=1);
+
 namespace BrianFaust\Basket\Jurisdictions\SouthAmerica;
 
 use BrianFaust\Basket\Contracts\Jurisdiction;
+use BrianFaust\Basket\Contracts\TaxRate;
 use BrianFaust\Basket\TaxRates\SouthAmerica\GuyanaValueAddedTax;
 use Money\Currency;
 
@@ -30,7 +33,7 @@ class Guyana implements Jurisdiction
     /**
      * Guyana constructor.
      */
-    public function __construct()
+    public function __construct(): void
     {
         $this->tax = new GuyanaValueAddedTax();
         $this->currency = new Currency('GYD');
@@ -39,7 +42,7 @@ class Guyana implements Jurisdiction
     /**
      * @return GuyanaValueAddedTax
      */
-    public function rate()
+    public function rate() : TaxRate
     {
         return $this->tax;
     }
@@ -47,7 +50,7 @@ class Guyana implements Jurisdiction
     /**
      * @return Currency
      */
-    public function currency()
+    public function currency() : Currency
     {
         return $this->currency;
     }

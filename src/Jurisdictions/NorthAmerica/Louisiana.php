@@ -9,9 +9,12 @@
  * file that was distributed with this source code.
  */
 
+declare(strict_types=1);
+
 namespace BrianFaust\Basket\Jurisdictions\NorthAmerica;
 
 use BrianFaust\Basket\Contracts\Jurisdiction;
+use BrianFaust\Basket\Contracts\TaxRate;
 use BrianFaust\Basket\TaxRates\NorthAmerica\LouisianaValueAddedTax;
 use Money\Currency;
 
@@ -30,7 +33,7 @@ class Louisiana implements Jurisdiction
     /**
      * Louisiana constructor.
      */
-    public function __construct()
+    public function __construct(): void
     {
         $this->tax = new LouisianaValueAddedTax();
         $this->currency = new Currency('USD');
@@ -39,7 +42,7 @@ class Louisiana implements Jurisdiction
     /**
      * @return LouisianaValueAddedTax
      */
-    public function rate()
+    public function rate() : TaxRate
     {
         return $this->tax;
     }
@@ -47,7 +50,7 @@ class Louisiana implements Jurisdiction
     /**
      * @return Currency
      */
-    public function currency()
+    public function currency() : Currency
     {
         return $this->currency;
     }

@@ -9,6 +9,8 @@
  * file that was distributed with this source code.
  */
 
+declare(strict_types=1);
+
 namespace BrianFaust\Basket\Formatters;
 
 use BrianFaust\Basket\Contracts\Formatter;
@@ -34,7 +36,7 @@ class MoneyFormatter implements Formatter
      *
      * @param null $locale
      */
-    public function __construct($locale = null)
+    public function __construct($locale = null): void
     {
         $this->locale = $locale;
 
@@ -48,7 +50,7 @@ class MoneyFormatter implements Formatter
      *
      * @return string
      */
-    public function format($value)
+    public function format($value): string
     {
         $formatter = new NumberFormatter($this->locale(), NumberFormatter::CURRENCY);
 
@@ -66,7 +68,7 @@ class MoneyFormatter implements Formatter
     /**
      * @return null|string
      */
-    private function locale()
+    private function locale(): string
     {
         if ($this->locale) {
             return $this->locale;
@@ -80,7 +82,7 @@ class MoneyFormatter implements Formatter
      *
      * @return mixed
      */
-    private function code(Money $value)
+    private function code(Money $value): string
     {
         return $value->getCurrency()->getName();
     }
@@ -90,7 +92,7 @@ class MoneyFormatter implements Formatter
      *
      * @return mixed
      */
-    private function divisor($code)
+    private function divisor($code): string
     {
         return static::$currencies->$code->subunit_to_unit;
     }
@@ -101,7 +103,7 @@ class MoneyFormatter implements Formatter
      *
      * @return string
      */
-    private function convert(Money $money, $divisor)
+    private function convert(Money $money, $divisor): string
     {
         return number_format(($money->getAmount() / $divisor), 2, '.', '');
     }

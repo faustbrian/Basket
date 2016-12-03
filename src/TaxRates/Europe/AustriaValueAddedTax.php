@@ -9,6 +9,8 @@
  * file that was distributed with this source code.
  */
 
+declare(strict_types=1);
+
 namespace BrianFaust\Basket\TaxRates\Europe;
 
 use BrianFaust\Basket\Contracts\TaxRate;
@@ -23,7 +25,7 @@ class AustriaValueAddedTax implements TaxRate
     /**
      * AustriaValueAddedTax constructor.
      */
-    public function __construct()
+    public function __construct(): void
     {
         $this->rate = 0.20;
     }
@@ -31,7 +33,7 @@ class AustriaValueAddedTax implements TaxRate
     /**
      * @return float
      */
-    public function float()
+    public function float(): float
     {
         return $this->rate;
     }
@@ -39,7 +41,7 @@ class AustriaValueAddedTax implements TaxRate
     /**
      * @return int
      */
-    public function percentage()
+    public function percentage(): int
     {
         return intval($this->rate * 100);
     }

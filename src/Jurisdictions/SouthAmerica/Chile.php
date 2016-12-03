@@ -9,9 +9,12 @@
  * file that was distributed with this source code.
  */
 
+declare(strict_types=1);
+
 namespace BrianFaust\Basket\Jurisdictions\SouthAmerica;
 
 use BrianFaust\Basket\Contracts\Jurisdiction;
+use BrianFaust\Basket\Contracts\TaxRate;
 use BrianFaust\Basket\TaxRates\SouthAmerica\ChileValueAddedTax;
 use Money\Currency;
 
@@ -30,7 +33,7 @@ class Chile implements Jurisdiction
     /**
      * Chile constructor.
      */
-    public function __construct()
+    public function __construct(): void
     {
         $this->tax = new ChileValueAddedTax();
         $this->currency = new Currency('CLP');
@@ -39,7 +42,7 @@ class Chile implements Jurisdiction
     /**
      * @return ChileValueAddedTax
      */
-    public function rate()
+    public function rate() : TaxRate
     {
         return $this->tax;
     }
@@ -47,7 +50,7 @@ class Chile implements Jurisdiction
     /**
      * @return Currency
      */
-    public function currency()
+    public function currency() : Currency
     {
         return $this->currency;
     }

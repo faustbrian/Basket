@@ -9,6 +9,8 @@
  * file that was distributed with this source code.
  */
 
+declare(strict_types=1);
+
 namespace BrianFaust\Basket\Transformers;
 
 use BrianFaust\Basket\Order;
@@ -20,7 +22,7 @@ class YAMLTransformer extends AbstractTransformer
      *
      * @return string
      */
-    public function transform(Order $order)
+    public function transform(Order $order): string
     {
         return yaml_serialise($this->build($order));
     }

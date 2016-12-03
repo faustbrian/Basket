@@ -9,6 +9,8 @@
  * file that was distributed with this source code.
  */
 
+declare(strict_types=1);
+
 namespace BrianFaust\Basket;
 
 use ArrayIterator;
@@ -28,7 +30,7 @@ class Collection implements Countable, IteratorAggregate
      *
      * @param array $items
      */
-    public function __construct(array $items = [])
+    public function __construct(array $items = []): void
     {
         $this->items = $items;
     }
@@ -37,7 +39,7 @@ class Collection implements Countable, IteratorAggregate
      * @param $key
      * @param $value
      */
-    public function add($key, $value)
+    public function add($key, $value): void
     {
         $this->items[$key] = $value;
     }

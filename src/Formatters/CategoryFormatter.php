@@ -9,6 +9,8 @@
  * file that was distributed with this source code.
  */
 
+declare(strict_types=1);
+
 namespace BrianFaust\Basket\Formatters;
 
 use BrianFaust\Basket\Contracts\Formatter;
@@ -20,7 +22,7 @@ class CategoryFormatter implements Formatter
      *
      * @return mixed
      */
-    public function format($value)
+    public function format($value): string
     {
         $namespace = explode('\\', get_class($value));
         $class = array_pop($namespace);

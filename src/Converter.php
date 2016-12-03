@@ -9,6 +9,8 @@
  * file that was distributed with this source code.
  */
 
+declare(strict_types=1);
+
 namespace BrianFaust\Basket;
 
 use BrianFaust\Basket\Formatters\CategoryFormatter;
@@ -30,7 +32,7 @@ class Converter
      *
      * @param array $formatters
      */
-    public function __construct(array $formatters = [])
+    public function __construct(array $formatters = []): void
     {
         $bootstrap = [
             'Category'           => new CategoryFormatter(),

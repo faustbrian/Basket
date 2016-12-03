@@ -9,6 +9,8 @@
  * file that was distributed with this source code.
  */
 
+declare(strict_types=1);
+
 namespace BrianFaust\Basket\Discounts;
 
 use BrianFaust\Basket\Contracts\Discount;
@@ -28,7 +30,7 @@ class ValueDiscount implements Discount, MoneyInterface
      *
      * @param Money $rate
      */
-    public function __construct(Money $rate)
+    public function __construct(Money $rate): void
     {
         $this->rate = $rate;
     }
@@ -38,7 +40,7 @@ class ValueDiscount implements Discount, MoneyInterface
      *
      * @return Money
      */
-    public function product(Product $product)
+    public function product(Product $product): Money
     {
         return $this->rate;
     }
@@ -46,7 +48,7 @@ class ValueDiscount implements Discount, MoneyInterface
     /**
      * @return Money
      */
-    public function rate()
+    public function rate(): Money
     {
         return $this->rate;
     }
@@ -54,7 +56,7 @@ class ValueDiscount implements Discount, MoneyInterface
     /**
      * @return Money
      */
-    public function toMoney()
+    public function toMoney(): Money
     {
         return $this->rate;
     }

@@ -9,7 +9,7 @@
         "homepage": "https://brianfaust.de"
     }],
     "require": {
-        "php": "^7.0",
+        "php": "^7.1",
         "ext-intl": "*",
         "mathiasverraes/money": "^1.2",
         "faustbrian/payload": "^1.0"

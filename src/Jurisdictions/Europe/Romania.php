@@ -9,9 +9,12 @@
  * file that was distributed with this source code.
  */
 
+declare(strict_types=1);
+
 namespace BrianFaust\Basket\Jurisdictions\Europe;
 
 use BrianFaust\Basket\Contracts\Jurisdiction;
+use BrianFaust\Basket\Contracts\TaxRate;
 use BrianFaust\Basket\TaxRates\Europe\RomaniaValueAddedTax;
 use Money\Currency;
 
@@ -30,7 +33,7 @@ class Romania implements Jurisdiction
     /**
      * Romania constructor.
      */
-    public function __construct()
+    public function __construct(): void
     {
         $this->tax = new RomaniaValueAddedTax();
         $this->currency = new Currency('RON');
@@ -39,7 +42,7 @@ class Romania implements Jurisdiction
     /**
      * @return RomaniaValueAddedTax
      */
-    public function rate()
+    public function rate() : TaxRate
     {
         return $this->tax;
     }
@@ -47,7 +50,7 @@ class Romania implements Jurisdiction
     /**
      * @return Currency
      */
-    public function currency()
+    public function currency() : Currency
     {
         return $this->currency;
     }

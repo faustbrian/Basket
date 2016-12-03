@@ -9,6 +9,8 @@
  * file that was distributed with this source code.
  */
 
+declare(strict_types=1);
+
 namespace BrianFaust\Basket\Formatters;
 
 use BrianFaust\Basket\Contracts\Formatter;
@@ -21,7 +23,7 @@ class PercentFormatter implements Formatter
      *
      * @return string
      */
-    public function format($value)
+    public function format($value): string
     {
         if ($value instanceof Percentage) {
             $value = $value->toPercent();

@@ -9,6 +9,8 @@
  * file that was distributed with this source code.
  */
 
+declare(strict_types=1);
+
 namespace BrianFaust\Basket;
 
 use BrianFaust\Basket\Contracts\Discount;
@@ -42,7 +44,7 @@ class Basket
      *
      * @param Jurisdiction $jurisdiction
      */
-    public function __construct(Jurisdiction $jurisdiction)
+    public function __construct(Jurisdiction $jurisdiction): void
     {
         $this->rate = $jurisdiction->rate();
         $this->currency = $jurisdiction->currency();
@@ -60,7 +62,7 @@ class Basket
     /**
      * @return mixed
      */
-    public function currency()
+    public function currency() : Currency
     {
         return $this->currency;
     }

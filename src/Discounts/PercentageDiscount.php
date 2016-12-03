@@ -9,6 +9,8 @@
  * file that was distributed with this source code.
  */
 
+declare(strict_types=1);
+
 namespace BrianFaust\Basket\Discounts;
 
 use BrianFaust\Basket\Contracts\Discount;
@@ -28,7 +30,7 @@ class PercentageDiscount implements Discount, Percentage
      *
      * @param $rate
      */
-    public function __construct($rate)
+    public function __construct($rate): void
     {
         $this->rate = $rate;
     }
@@ -38,7 +40,7 @@ class PercentageDiscount implements Discount, Percentage
      *
      * @return mixed
      */
-    public function product(Product $product)
+    public function product(Product $product): float
     {
         return $product->price->multiply($this->rate / 100);
     }
@@ -46,7 +48,7 @@ class PercentageDiscount implements Discount, Percentage
     /**
      * @return Percent
      */
-    public function rate()
+    public function rate(): Percent
     {
         return new Percent($this->rate);
     }
@@ -54,7 +56,7 @@ class PercentageDiscount implements Discount, Percentage
     /**
      * @return Percent
      */
-    public function toPercent()
+    public function toPercent(): Percent
     {
         return new Percent($this->rate);
     }
