@@ -32,7 +32,7 @@ class Converter
      *
      * @param array $formatters
      */
-    public function __construct(array $formatters = []): void
+    public function __construct(array $formatters = [])
     {
         $bootstrap = [
             'Category'           => new CategoryFormatter(),

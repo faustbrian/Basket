@@ -30,7 +30,7 @@ class PercentageDiscount implements Discount, Percentage
      *
      * @param $rate
      */
-    public function __construct($rate): void
+    public function __construct($rate)
     {
         $this->rate = $rate;
     }

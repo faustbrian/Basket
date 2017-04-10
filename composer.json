@@ -11,7 +11,7 @@
     "require": {
         "php": "^7.1",
         "ext-intl": "*",
-        "mathiasverraes/money": "^1.2",
+        "moneyphp/money": "^3.0",
         "faustbrian/payload": "^1.0"
     },
     "require-dev": {

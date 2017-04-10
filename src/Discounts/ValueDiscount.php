@@ -30,7 +30,7 @@ class ValueDiscount implements Discount, MoneyInterface
      *
      * @param Money $rate
      */
-    public function __construct(Money $rate): void
+    public function __construct(Money $rate)
     {
         $this->rate = $rate;
     }

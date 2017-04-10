@@ -30,7 +30,7 @@ class Collection implements Countable, IteratorAggregate
      *
      * @param array $items
      */
-    public function __construct(array $items = []): void
+    public function __construct(array $items = [])
     {
         $this->items = $items;
     }

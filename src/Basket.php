@@ -16,6 +16,7 @@ namespace BrianFaust\Basket;
 use BrianFaust\Basket\Contracts\Discount;
 use BrianFaust\Basket\Contracts\Jurisdiction;
 use Closure;
+use Money\Currency;
 
 class Basket
 {
@@ -44,7 +45,7 @@ class Basket
      *
      * @param Jurisdiction $jurisdiction
      */
-    public function __construct(Jurisdiction $jurisdiction): void
+    public function __construct(Jurisdiction $jurisdiction)
     {
         $this->rate = $jurisdiction->rate();
         $this->currency = $jurisdiction->currency();

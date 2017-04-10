@@ -36,7 +36,7 @@ class MoneyFormatter implements Formatter
      *
      * @param null $locale
      */
-    public function __construct($locale = null): void
+    public function __construct($locale = null)
     {
         $this->locale = $locale;
 
@@ -84,7 +84,7 @@ class MoneyFormatter implements Formatter
      */
     private function code(Money $value): string
     {
-        return $value->getCurrency()->getName();
+        return $value->getCurrency()->getCode();
     }
 
     /**
@@ -92,9 +92,9 @@ class MoneyFormatter implements Formatter
      *
      * @return mixed
      */
-    private function divisor($code): string
+    private function divisor($code): int
     {
-        return static::$currencies->$code->subunit_to_unit;
+        return static::$currencies[$code]->subunit_to_unit;
     }
 
     /**
@@ -103,8 +103,8 @@ class MoneyFormatter implements Formatter
      *
      * @return string
      */
-    private function convert(Money $money, $divisor): string
+    private function convert(Money $money, $divisor): float
     {
-        return number_format(($money->getAmount() / $divisor), 2, '.', '');
+        return (float) number_format(($money->getAmount() / $divisor), 2, '.', '');
     }
 }

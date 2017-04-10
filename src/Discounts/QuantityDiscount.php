@@ -35,7 +35,7 @@ class QuantityDiscount implements Discount
      * @param $quantity
      * @param Discount $rate
      */
-    public function __construct($quantity, Discount $rate): void
+    public function __construct($quantity, Discount $rate)
     {
         $this->quantity = $quantity;
         $this->rate = $rate;
