@@ -116,6 +116,28 @@ class Collection implements Countable, IteratorAggregate
     }
 
     /**
+     * Determine if an item exists in the collection by key.
+     *
+     * @param  mixed  $key
+     * @return bool
+     */
+    public function has($key)
+    {
+        return $this->offsetExists($key);
+    }
+
+    /**
+     * Determine if an item exists at an offset.
+     *
+     * @param  mixed  $key
+     * @return bool
+     */
+    public function offsetExists($key)
+    {
+        return array_key_exists($key, $this->items);
+    }
+
+    /**
      * @return mixed
      */
     public function first()

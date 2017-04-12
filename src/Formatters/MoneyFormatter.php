@@ -23,6 +23,8 @@ declare(strict_types=1);
 namespace BrianFaust\Basket\Formatters;
 
 use BrianFaust\Basket\Contracts\Formatter;
+use BrianFaust\Basket\Discounts\QuantityDiscount;
+use BrianFaust\Basket\Discounts\ValueDiscount;
 use BrianFaust\Basket\Money as MoneyInterface;
 use Locale;
 use Money\Money;
@@ -65,6 +67,10 @@ class MoneyFormatter implements Formatter
 
         if ($value instanceof MoneyInterface) {
             $value = $value->toMoney();
+        }
+
+        if ($value instanceof ValueDiscount) {
+            $value = $value->rate();
         }
 
         $code = $this->code($value);

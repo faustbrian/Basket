@@ -115,6 +115,7 @@ class Processor
                 'coupons'        => $product->coupons,
                 'tags'           => $product->tags,
                 'discounts'      => $product->discounts,
+                'attributes'     => $product->attributes,
                 'category'       => $product->category,
                 'total_value'    => $this->reconciler->value($product),
                 'total_discount' => $this->reconciler->discount($product),

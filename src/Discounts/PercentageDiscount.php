@@ -26,6 +26,7 @@ use BrianFaust\Basket\Contracts\Discount;
 use BrianFaust\Basket\Contracts\Percentage;
 use BrianFaust\Basket\Percent;
 use BrianFaust\Basket\Product;
+use Money\Money;
 
 class PercentageDiscount implements Discount, Percentage
 {
@@ -49,7 +50,7 @@ class PercentageDiscount implements Discount, Percentage
      *
      * @return mixed
      */
-    public function product(Product $product): float
+    public function product(Product $product): Money
     {
         return $product->price->multiply($this->rate / 100);
     }

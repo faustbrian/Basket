@@ -86,9 +86,14 @@ class Product
     private $discounts;
 
     /**
-     * @var
+     * @var string
      */
     private $category;
+
+    /**
+     * @var Collection
+     */
+    private $attributes;
 
     /**
      * Product constructor.
@@ -111,6 +116,7 @@ class Product
         $this->coupons = new Collection();
         $this->tags = new Collection();
         $this->discounts = new Collection();
+        $this->attributes = new Collection();
     }
 
     /**
@@ -148,6 +154,17 @@ class Product
     }
 
     /**
+     * Set the tax rate
+     *
+     * @param int $rate
+     * @return void
+     */
+    public function rate($rate)
+    {
+        $this->rate = $rate;
+    }
+
+    /**
      * @param Money $delivery
      */
     public function delivery(Money $delivery)
@@ -182,6 +199,19 @@ class Product
     }
 
     /**
+     * Add an attribute
+     *
+     * @param string $key
+     * @param mixed  $value
+     *
+     * @return void
+     */
+    public function attributes($key, $value)
+    {
+        $this->attributes->add($key, $value);
+    }
+
+    /**
      * @param Category $category
      */
     public function category(Category $category)
@@ -208,6 +238,10 @@ class Product
     {
         if (property_exists($this, $key)) {
             return $this->$key;
+        }
+
+        if ($this->attributes->has($key)) {
+            return $this->attributes->get($key);
         }
     }
 }

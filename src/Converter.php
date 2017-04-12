@@ -28,6 +28,7 @@ use BrianFaust\Basket\Formatters\CouponFormatter;
 use BrianFaust\Basket\Formatters\MoneyFormatter;
 use BrianFaust\Basket\Formatters\PercentFormatter;
 use BrianFaust\Basket\Formatters\TaxRateFormatter;
+use BrianFaust\Basket\Formatters\QuantityFormatter;
 
 class Converter
 {
@@ -51,6 +52,7 @@ class Converter
             'Percent'            => new PercentFormatter(),
             'PercentageDiscount' => new PercentFormatter(),
             'TaxRate'            => new TaxRateFormatter(),
+            'QuantityDiscount'   => new QuantityFormatter(),
             'ValueDiscount'      => new MoneyFormatter(),
         ];
 
