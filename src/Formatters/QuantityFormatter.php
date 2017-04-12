@@ -23,7 +23,6 @@ declare(strict_types=1);
 namespace BrianFaust\Basket\Formatters;
 
 use BrianFaust\Basket\Contracts\Formatter;
-use BrianFaust\Basket\Contracts\Percentage;
 use BrianFaust\Basket\Discounts\PercentageDiscount;
 use BrianFaust\Basket\Discounts\ValueDiscount;
 
