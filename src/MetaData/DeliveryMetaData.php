@@ -49,6 +49,10 @@ class DeliveryMetaData implements MetaData
             $total = $total->add($this->reconciler->delivery($product));
         }
 
+        if ($basket->delivery instanceof Money) {
+            $total = $total->add($basket->delivery);
+        }
+
         return $total;
     }
 
