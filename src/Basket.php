@@ -17,8 +17,8 @@ namespace BrianFaust\Basket;
 use BrianFaust\Basket\Contracts\Discount;
 use BrianFaust\Basket\Contracts\Jurisdiction;
 use Closure;
-use Money\Money;
 use Money\Currency;
+use Money\Money;
 
 class Basket
 {
