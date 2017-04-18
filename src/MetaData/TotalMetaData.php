@@ -49,6 +49,10 @@ class TotalMetaData implements MetaData
             $total = $total->add($this->reconciler->total($product));
         }
 
+        if ($basket->delivery instanceof Money) {
+            $total = $total->add($basket->delivery);
+        }
+
         return $total;
     }
 

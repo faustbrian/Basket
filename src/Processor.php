@@ -51,8 +51,9 @@ class Processor
 
         $meta = $this->meta($basket);
         $products = $this->products($basket);
+        $delivery = $basket->delivery;
 
-        return new Order($meta, $products);
+        return new Order($meta, $products, $delivery);
     }
 
     /**

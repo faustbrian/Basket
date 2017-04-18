@@ -17,6 +17,7 @@ namespace BrianFaust\Basket;
 use BrianFaust\Basket\Contracts\Discount;
 use BrianFaust\Basket\Contracts\Jurisdiction;
 use Closure;
+use Money\Money;
 use Money\Currency;
 
 class Basket
@@ -40,6 +41,11 @@ class Basket
      * @var
      */
     private $discount;
+
+    /**
+     * @var
+     */
+    private $delivery;
 
     /**
      * Basket constructor.
@@ -130,6 +136,14 @@ class Basket
     public function discount(Discount $discount)
     {
         $this->discount = $discount;
+    }
+
+    /**
+     * @param Money $delivery
+     */
+    public function delivery(Money $delivery)
+    {
+        $this->delivery = $delivery;
     }
 
     /**

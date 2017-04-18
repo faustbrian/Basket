@@ -14,6 +14,8 @@ declare(strict_types=1);
 
 namespace BrianFaust\Basket;
 
+use Money\Money;
+
 class Order
 {
     /**
@@ -27,15 +29,22 @@ class Order
     private $products;
 
     /**
+     * @var Money\Money
+     */
+    private $delivery;
+
+    /**
      * Order constructor.
      *
      * @param array $meta
      * @param array $products
+     * @param Money\Money $delivery
      */
-    public function __construct(array $meta, array $products)
+    public function __construct(array $meta, array $products, ?Money $delivery)
     {
         $this->meta = $meta;
         $this->products = $products;
+        $this->delivery = $delivery;
     }
 
     /**
@@ -52,6 +61,14 @@ class Order
     public function products()
     {
         return $this->products;
+    }
+
+    /**
+     * @return Money\Money
+     */
+    public function delivery()
+    {
+        return $this->delivery;
     }
 
     /**
