@@ -70,7 +70,7 @@ class Basket
     /**
      * @return mixed
      */
-    public function currency() : Currency
+    public function currency(): Currency
     {
         return $this->currency;
     }
@@ -131,6 +131,24 @@ class Basket
     }
 
     /**
+     * @return void
+     */
+    public function flush()
+    {
+        foreach ($this->products as $product) {
+            $this->remove($product->sku);
+        }
+    }
+
+    /**
+     * @param $sku
+     */
+    public function has($sku)
+    {
+        return $this->products->containsKey($sku);
+    }
+
+    /**
      * @param Discount $discount
      */
     public function discount(Discount $discount)
@@ -144,6 +162,14 @@ class Basket
     public function delivery(Money $delivery)
     {
         $this->delivery = $delivery;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isEmpty()
+    {
+        return $this->products->isEmpty();
     }
 
     /**
