@@ -49,6 +49,10 @@ class DiscountMetaData implements MetaData
             $total = $total->add($this->reconciler->discount($product));
         }
 
+        if ($basketDiscount = $basket->discount) {
+            $total = $total->add($basketDiscount->rate());
+        }
+
         return $total;
     }
 

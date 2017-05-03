@@ -53,6 +53,10 @@ class TotalMetaData implements MetaData
             $total = $total->add($basket->delivery);
         }
 
+        if ($basketDiscount = $basket->discount) {
+            $total = $total->subtract($basketDiscount->rate());
+        }
+
         return $total;
     }
 

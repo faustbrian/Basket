@@ -47,27 +47,11 @@ class Processor
      */
     public function process(Basket $basket)
     {
-        $this->discount($basket);
-
         $meta = $this->meta($basket);
         $products = $this->products($basket);
         $delivery = $basket->delivery;
 
         return new Order($meta, $products, $delivery);
-    }
-
-    /**
-     * @param Basket $basket
-     */
-    public function discount(Basket $basket)
-    {
-        if ($basket->discount) {
-            foreach ($basket->products() as $product) {
-                $basket->update($product->sku, function ($product) use ($basket) {
-                    $product->discount($basket->discount);
-                });
-            }
-        }
     }
 
     /**

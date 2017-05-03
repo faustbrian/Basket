@@ -49,6 +49,14 @@ class ValueMetaData implements MetaData
             $total = $total->add($this->reconciler->value($product));
         }
 
+        if ($basket->delivery instanceof Money) {
+            $total = $total->add($basket->delivery);
+        }
+
+        if ($basketDiscount = $basket->discount) {
+            $total = $total->subtract($basketDiscount->rate());
+        }
+
         return $total;
     }
 
