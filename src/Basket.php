@@ -130,9 +130,6 @@ class Basket
         $this->products->remove($sku);
     }
 
-    /**
-     * @return void
-     */
     public function flush()
     {
         foreach ($this->products as $product) {

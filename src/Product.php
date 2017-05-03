@@ -149,8 +149,6 @@ class Product
      * Set the tax rate.
      *
      * @param int $rate
-     *
-     * @return void
      */
     public function rate($rate)
     {
@@ -196,8 +194,6 @@ class Product
      *
      * @param string $key
      * @param mixed  $value
-     *
-     * @return void
      */
     public function attributes($key, $value)
     {

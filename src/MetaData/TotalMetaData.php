@@ -21,6 +21,8 @@ use Money\Money;
 
 class TotalMetaData implements MetaData
 {
+    use Traits\ApplyDiscount;
+
     /**
      * @var Reconciler
      */
@@ -49,12 +51,12 @@ class TotalMetaData implements MetaData
             $total = $total->add($this->reconciler->total($product));
         }
 
-        if ($basket->delivery instanceof Money) {
-            $total = $total->add($basket->delivery);
+        if ($discount = $basket->discount) {
+            $total = $this->calculateTotalDiscount($discount, $total);
         }
 
-        if ($basketDiscount = $basket->discount) {
-            $total = $total->subtract($basketDiscount->rate());
+        if ($basket->delivery instanceof Money) {
+            $total = $total->add($basket->delivery);
         }
 
         return $total;
