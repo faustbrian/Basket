@@ -16,8 +16,8 @@ namespace BrianFaust\Basket\MetaData\Traits;
 
 use BrianFaust\Basket\Basket;
 use BrianFaust\Basket\Contracts\Discount;
-use BrianFaust\Basket\Discounts\ValueDiscount;
 use BrianFaust\Basket\Discounts\PercentageDiscount;
+use BrianFaust\Basket\Discounts\ValueDiscount;
 use Money\Money;
 
 trait ApplyDiscount
