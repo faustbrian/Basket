@@ -52,7 +52,7 @@ class TotalMetaData implements MetaData
         }
 
         if ($discount = $basket->discount) {
-            $total = $this->calculateTotalDiscount($discount, $total);
+            $total = $this->calculateTotalDiscount($basket, $discount, $total);
         }
 
         if ($basket->delivery instanceof Money) {
