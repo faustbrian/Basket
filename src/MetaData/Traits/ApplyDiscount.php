@@ -16,15 +16,15 @@ namespace BrianFaust\Basket\MetaData\Traits;
 
 use BrianFaust\Basket\Basket;
 use BrianFaust\Basket\Contracts\Discount;
-use BrianFaust\Basket\Discounts\ValueDiscount;
 use BrianFaust\Basket\Discounts\PercentageDiscount;
 use BrianFaust\Basket\Discounts\QuantityDiscount;
+use BrianFaust\Basket\Discounts\ValueDiscount;
 use Money\Money;
 
 trait ApplyDiscount
 {
     /**
-     * @param Basket $basket
+     * @param Basket   $basket
      * @param Discount $discount
      * @param Money    $total
      *
@@ -119,20 +119,24 @@ trait ApplyDiscount
     }
 
     /**
-     * @param  Money    $total
-     * @param  Discount $discount
+     * @param Money    $total
+     * @param Discount $discount
+     *
      * @return Money
      */
-    protected function subtractValueDiscount(Money $total, Discount $discount): Money {
+    protected function subtractValueDiscount(Money $total, Discount $discount): Money
+    {
         return $total->subtract($discount->rate());
     }
 
     /**
-     * @param  Money    $total
-     * @param  Discount $discount
+     * @param Money    $total
+     * @param Discount $discount
+     *
      * @return Money
      */
-    protected function subtractPercentageDiscount(Money $total, Discount $discount): Money {
+    protected function subtractPercentageDiscount(Money $total, Discount $discount): Money
+    {
         return $total->subtract($total->multiply($discount->rate()->int() / 100));
     }
 }
