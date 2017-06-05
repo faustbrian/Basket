@@ -1,8 +1,5 @@
 <?php
 
-
-declare(strict_types=1);
-
 /*
  * This file is part of Basket.
  *
@@ -43,7 +40,7 @@ class Luxembourg implements Jurisdiction
     /**
      * @return LuxembourgValueAddedTax
      */
-    public function rate() : TaxRate
+    public function rate(): TaxRate
     {
         return $this->tax;
     }
@@ -51,7 +48,7 @@ class Luxembourg implements Jurisdiction
     /**
      * @return Currency
      */
-    public function currency() : Currency
+    public function currency(): Currency
     {
         return $this->currency;
     }

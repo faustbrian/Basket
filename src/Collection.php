@@ -1,8 +1,5 @@
 <?php
 
-
-declare(strict_types=1);
-
 /*
  * This file is part of Basket.
  *
@@ -40,7 +37,7 @@ class Collection implements Countable, IteratorAggregate
      * @param $key
      * @param $value
      */
-    public function add($key, $value): void
+    public function add($key, $value)
     {
         $this->items[$key] = $value;
     }

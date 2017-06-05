@@ -63,19 +63,11 @@ $coupon->add(new QuantityDiscount(5, $quantityDiscount));
 - [x] Add more Transformers **(XML, YAML)**
 - [ ] Recursive Transformation of Collection children **(Coupons, Discounts)** -->
 
-## Changelog
-
-Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
-
 ## Testing
 
 ``` bash
 $ phpunit
 ```
-
-## Contributing
-
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Security
 
