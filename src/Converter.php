@@ -34,15 +34,15 @@ class Converter
     public function __construct(array $formatters = [])
     {
         $bootstrap = [
-            'Category'           => new CategoryFormatter(),
-            'Collection'         => new CollectionFormatter(),
-            'Coupon'             => new CouponFormatter(),
-            'Money'              => new MoneyFormatter(),
-            'Percent'            => new PercentFormatter(),
+            'Category' => new CategoryFormatter(),
+            'Collection' => new CollectionFormatter(),
+            'Coupon' => new CouponFormatter(),
+            'Money' => new MoneyFormatter(),
+            'Percent' => new PercentFormatter(),
             'PercentageDiscount' => new PercentFormatter(),
-            'TaxRate'            => new TaxRateFormatter(),
-            'QuantityDiscount'   => new QuantityFormatter(),
-            'ValueDiscount'      => new MoneyFormatter(),
+            'TaxRate' => new TaxRateFormatter(),
+            'QuantityDiscount' => new QuantityFormatter(),
+            'ValueDiscount' => new MoneyFormatter(),
         ];
 
         $this->formatters = array_merge($bootstrap, $formatters);
