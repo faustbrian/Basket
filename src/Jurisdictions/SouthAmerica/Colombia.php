@@ -11,10 +11,10 @@
 
 namespace BrianFaust\Basket\Jurisdictions\SouthAmerica;
 
-use BrianFaust\Basket\Contracts\Jurisdiction;
-use BrianFaust\Basket\Contracts\TaxRate;
-use BrianFaust\Basket\TaxRates\SouthAmerica\ColombiaValueAddedTax;
 use Money\Currency;
+use BrianFaust\Basket\Contracts\TaxRate;
+use BrianFaust\Basket\Contracts\Jurisdiction;
+use BrianFaust\Basket\TaxRates\SouthAmerica\ColombiaValueAddedTax;
 
 class Colombia implements Jurisdiction
 {

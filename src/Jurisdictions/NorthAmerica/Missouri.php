@@ -11,10 +11,10 @@
 
 namespace BrianFaust\Basket\Jurisdictions\NorthAmerica;
 
-use BrianFaust\Basket\Contracts\Jurisdiction;
-use BrianFaust\Basket\Contracts\TaxRate;
-use BrianFaust\Basket\TaxRates\NorthAmerica\MissouriValueAddedTax;
 use Money\Currency;
+use BrianFaust\Basket\Contracts\TaxRate;
+use BrianFaust\Basket\Contracts\Jurisdiction;
+use BrianFaust\Basket\TaxRates\NorthAmerica\MissouriValueAddedTax;
 
 class Missouri implements Jurisdiction
 {

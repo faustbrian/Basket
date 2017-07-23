@@ -11,11 +11,11 @@
 
 namespace BrianFaust\Basket\Discounts;
 
-use BrianFaust\Basket\Contracts\Discount;
-use BrianFaust\Basket\Contracts\Percentage;
+use Money\Money;
 use BrianFaust\Basket\Percent;
 use BrianFaust\Basket\Product;
-use Money\Money;
+use BrianFaust\Basket\Contracts\Discount;
+use BrianFaust\Basket\Contracts\Percentage;
 
 class PercentageDiscount implements Discount, Percentage
 {

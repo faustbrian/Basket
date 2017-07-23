@@ -11,10 +11,10 @@
 
 namespace BrianFaust\Basket\Jurisdictions\NorthAmerica;
 
-use BrianFaust\Basket\Contracts\Jurisdiction;
-use BrianFaust\Basket\Contracts\TaxRate;
-use BrianFaust\Basket\TaxRates\NorthAmerica\WisconsinValueAddedTax;
 use Money\Currency;
+use BrianFaust\Basket\Contracts\TaxRate;
+use BrianFaust\Basket\Contracts\Jurisdiction;
+use BrianFaust\Basket\TaxRates\NorthAmerica\WisconsinValueAddedTax;
 
 class Wisconsin implements Jurisdiction
 {

@@ -11,10 +11,10 @@
 
 namespace BrianFaust\Basket\MetaData;
 
+use Money\Money;
 use BrianFaust\Basket\Basket;
 use BrianFaust\Basket\Contracts\MetaData;
 use BrianFaust\Basket\Contracts\Reconciler;
-use Money\Money;
 
 class TaxMetaData implements MetaData
 {

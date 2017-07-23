@@ -11,10 +11,10 @@
 
 namespace BrianFaust\Basket\Jurisdictions\NorthAmerica;
 
-use BrianFaust\Basket\Contracts\Jurisdiction;
-use BrianFaust\Basket\Contracts\TaxRate;
-use BrianFaust\Basket\TaxRates\NorthAmerica\ArkansasValueAddedTax;
 use Money\Currency;
+use BrianFaust\Basket\Contracts\TaxRate;
+use BrianFaust\Basket\Contracts\Jurisdiction;
+use BrianFaust\Basket\TaxRates\NorthAmerica\ArkansasValueAddedTax;
 
 class Arkansas implements Jurisdiction
 {

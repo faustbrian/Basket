@@ -11,9 +11,9 @@
 
 namespace BrianFaust\Basket\Transformers;
 
-use BrianFaust\Basket\Contracts\Transformer;
-use BrianFaust\Basket\Converter;
 use BrianFaust\Basket\Order;
+use BrianFaust\Basket\Converter;
+use BrianFaust\Basket\Contracts\Transformer;
 
 abstract class AbstractTransformer implements Transformer
 {

@@ -12,8 +12,8 @@
 namespace BrianFaust\Basket\Formatters;
 
 use BrianFaust\Basket\Contracts\Formatter;
-use BrianFaust\Basket\Discounts\PercentageDiscount;
 use BrianFaust\Basket\Discounts\ValueDiscount;
+use BrianFaust\Basket\Discounts\PercentageDiscount;
 
 class QuantityFormatter implements Formatter
 {

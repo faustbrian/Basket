@@ -11,10 +11,10 @@
 
 namespace BrianFaust\Basket\Jurisdictions\NorthAmerica;
 
-use BrianFaust\Basket\Contracts\Jurisdiction;
-use BrianFaust\Basket\Contracts\TaxRate;
-use BrianFaust\Basket\TaxRates\NorthAmerica\OregonValueAddedTax;
 use Money\Currency;
+use BrianFaust\Basket\Contracts\TaxRate;
+use BrianFaust\Basket\Contracts\Jurisdiction;
+use BrianFaust\Basket\TaxRates\NorthAmerica\OregonValueAddedTax;
 
 class Oregon implements Jurisdiction
 {
