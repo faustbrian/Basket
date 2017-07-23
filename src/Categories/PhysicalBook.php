@@ -11,8 +11,8 @@
 
 namespace BrianFaust\Basket\Categories;
 
-use BrianFaust\Basket\Contracts\Category;
 use BrianFaust\Basket\Product;
+use BrianFaust\Basket\Contracts\Category;
 
 class PhysicalBook implements Category
 {

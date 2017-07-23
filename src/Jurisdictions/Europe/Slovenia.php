@@ -11,10 +11,10 @@
 
 namespace BrianFaust\Basket\Jurisdictions\Europe;
 
-use BrianFaust\Basket\Contracts\Jurisdiction;
-use BrianFaust\Basket\Contracts\TaxRate;
-use BrianFaust\Basket\TaxRates\Europe\SloveniaValueAddedTax;
 use Money\Currency;
+use BrianFaust\Basket\Contracts\TaxRate;
+use BrianFaust\Basket\Contracts\Jurisdiction;
+use BrianFaust\Basket\TaxRates\Europe\SloveniaValueAddedTax;
 
 class Slovenia implements Jurisdiction
 {

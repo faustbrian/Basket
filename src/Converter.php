@@ -11,13 +11,13 @@
 
 namespace BrianFaust\Basket;
 
-use BrianFaust\Basket\Formatters\CategoryFormatter;
-use BrianFaust\Basket\Formatters\CollectionFormatter;
-use BrianFaust\Basket\Formatters\CouponFormatter;
 use BrianFaust\Basket\Formatters\MoneyFormatter;
+use BrianFaust\Basket\Formatters\CouponFormatter;
 use BrianFaust\Basket\Formatters\PercentFormatter;
-use BrianFaust\Basket\Formatters\QuantityFormatter;
 use BrianFaust\Basket\Formatters\TaxRateFormatter;
+use BrianFaust\Basket\Formatters\CategoryFormatter;
+use BrianFaust\Basket\Formatters\QuantityFormatter;
+use BrianFaust\Basket\Formatters\CollectionFormatter;
 
 class Converter
 {
@@ -55,7 +55,7 @@ class Converter
      */
     public function convert($value)
     {
-        if (!is_object($value)) {
+        if (! is_object($value)) {
             return $value;
         }
 

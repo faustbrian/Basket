@@ -11,10 +11,10 @@
 
 namespace BrianFaust\Basket\Jurisdictions\Europe;
 
-use BrianFaust\Basket\Contracts\Jurisdiction;
-use BrianFaust\Basket\Contracts\TaxRate;
-use BrianFaust\Basket\TaxRates\Europe\LithuaniaValueAddedTax;
 use Money\Currency;
+use BrianFaust\Basket\Contracts\TaxRate;
+use BrianFaust\Basket\Contracts\Jurisdiction;
+use BrianFaust\Basket\TaxRates\Europe\LithuaniaValueAddedTax;
 
 class Lithuania implements Jurisdiction
 {

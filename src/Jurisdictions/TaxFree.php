@@ -11,9 +11,9 @@
 
 namespace BrianFaust\Basket\Jurisdictions;
 
+use Money\Currency;
 use BrianFaust\Basket\Contracts\Jurisdiction;
 use BrianFaust\Basket\TaxRates\TaxFreeValueAddedTax;
-use Money\Currency;
 
 class TaxFree implements Jurisdiction
 {

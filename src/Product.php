@@ -11,11 +11,11 @@
 
 namespace BrianFaust\Basket;
 
-use BrianFaust\Basket\Contracts\Category;
-use BrianFaust\Basket\Contracts\Discount;
-use BrianFaust\Basket\Contracts\TaxRate;
 use Closure;
 use Money\Money;
+use BrianFaust\Basket\Contracts\TaxRate;
+use BrianFaust\Basket\Contracts\Category;
+use BrianFaust\Basket\Contracts\Discount;
 
 class Product
 {

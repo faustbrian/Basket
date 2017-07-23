@@ -11,9 +11,9 @@
 
 namespace BrianFaust\Basket\Discounts;
 
-use BrianFaust\Basket\Contracts\Discount;
-use BrianFaust\Basket\Product;
 use Money\Money;
+use BrianFaust\Basket\Product;
+use BrianFaust\Basket\Contracts\Discount;
 
 class QuantityDiscount implements Discount
 {
