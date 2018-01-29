@@ -120,12 +120,12 @@ class Product
 
     public function increment()
     {
-        ++$this->quantity;
+        $this->quantity++;
     }
 
     public function decrement()
     {
-        --$this->quantity;
+        $this->quantity--;
     }
 
     /**
