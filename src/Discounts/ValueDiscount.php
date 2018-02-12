@@ -13,10 +13,10 @@ declare(strict_types=1);
 
 namespace BrianFaust\Basket\Discounts;
 
-use Money\Money;
-use BrianFaust\Basket\Product;
 use BrianFaust\Basket\Contracts\Discount;
 use BrianFaust\Basket\Contracts\Money as MoneyInterface;
+use BrianFaust\Basket\Product;
+use Money\Money;
 
 class ValueDiscount implements Discount, MoneyInterface
 {

@@ -13,9 +13,9 @@ declare(strict_types=1);
 
 namespace BrianFaust\Basket\Transformers;
 
-use BrianFaust\Basket\Order;
-use BrianFaust\Basket\Converter;
 use BrianFaust\Basket\Contracts\Transformer;
+use BrianFaust\Basket\Converter;
+use BrianFaust\Basket\Order;
 
 abstract class AbstractTransformer implements Transformer
 {
