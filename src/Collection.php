@@ -13,9 +13,9 @@ declare(strict_types=1);
 
 namespace BrianFaust\Basket;
 
+use ArrayIterator;
 use Closure;
 use Countable;
-use ArrayIterator;
 use IteratorAggregate;
 
 class Collection implements Countable, IteratorAggregate

@@ -13,11 +13,11 @@ declare(strict_types=1);
 
 namespace BrianFaust\Basket\Discounts;
 
-use Money\Money;
-use BrianFaust\Basket\Percent;
-use BrianFaust\Basket\Product;
 use BrianFaust\Basket\Contracts\Discount;
 use BrianFaust\Basket\Contracts\Percentage;
+use BrianFaust\Basket\Percent;
+use BrianFaust\Basket\Product;
+use Money\Money;
 
 class PercentageDiscount implements Discount, Percentage
 {
