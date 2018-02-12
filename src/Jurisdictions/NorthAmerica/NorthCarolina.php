@@ -13,10 +13,10 @@ declare(strict_types=1);
 
 namespace BrianFaust\Basket\Jurisdictions\NorthAmerica;
 
-use Money\Currency;
-use BrianFaust\Basket\Contracts\TaxRate;
 use BrianFaust\Basket\Contracts\Jurisdiction;
+use BrianFaust\Basket\Contracts\TaxRate;
 use BrianFaust\Basket\TaxRates\NorthAmerica\NorthCarolinaValueAddedTax;
+use Money\Currency;
 
 class NorthCarolina implements Jurisdiction
 {

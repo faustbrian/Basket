@@ -13,12 +13,12 @@ declare(strict_types=1);
 
 namespace BrianFaust\Basket\MetaData\Traits;
 
-use Money\Money;
 use BrianFaust\Basket\Basket;
 use BrianFaust\Basket\Contracts\Discount;
-use BrianFaust\Basket\Discounts\ValueDiscount;
-use BrianFaust\Basket\Discounts\QuantityDiscount;
 use BrianFaust\Basket\Discounts\PercentageDiscount;
+use BrianFaust\Basket\Discounts\QuantityDiscount;
+use BrianFaust\Basket\Discounts\ValueDiscount;
+use Money\Money;
 
 trait ApplyDiscount
 {

@@ -13,10 +13,10 @@ declare(strict_types=1);
 
 namespace BrianFaust\Basket\Jurisdictions\Australia;
 
-use Money\Currency;
-use BrianFaust\Basket\Contracts\TaxRate;
 use BrianFaust\Basket\Contracts\Jurisdiction;
+use BrianFaust\Basket\Contracts\TaxRate;
 use BrianFaust\Basket\TaxRates\AustraliaValueAddedTax;
+use Money\Currency;
 
 class Australia implements Jurisdiction
 {

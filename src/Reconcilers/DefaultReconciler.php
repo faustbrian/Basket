@@ -13,9 +13,9 @@ declare(strict_types=1);
 
 namespace BrianFaust\Basket\Reconcilers;
 
-use Money\Money;
-use BrianFaust\Basket\Product;
 use BrianFaust\Basket\Contracts\Reconciler;
+use BrianFaust\Basket\Product;
+use Money\Money;
 
 class DefaultReconciler implements Reconciler
 {
@@ -83,7 +83,7 @@ class DefaultReconciler implements Reconciler
     {
         $tax = $this->money($product);
 
-        if (! $product->taxable || $product->freebie) {
+        if (!$product->taxable || $product->freebie) {
             return $tax;
         }
 
@@ -105,7 +105,7 @@ class DefaultReconciler implements Reconciler
     {
         $subtotal = $this->money($product);
 
-        if (! $product->freebie) {
+        if (!$product->freebie) {
             $value = $this->value($product);
             $discount = $this->discount($product);
             $subtotal = $subtotal->add($value)->subtract($discount);
