@@ -13,10 +13,10 @@ declare(strict_types=1);
 
 namespace BrianFaust\Basket\Jurisdictions\NorthAmerica;
 
-use Money\Currency;
-use BrianFaust\Basket\Contracts\TaxRate;
 use BrianFaust\Basket\Contracts\Jurisdiction;
+use BrianFaust\Basket\Contracts\TaxRate;
 use BrianFaust\Basket\TaxRates\NorthAmerica\VirginiaValueAddedTax;
+use Money\Currency;
 
 class Virginia implements Jurisdiction
 {

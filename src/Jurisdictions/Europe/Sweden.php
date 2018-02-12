@@ -13,10 +13,10 @@ declare(strict_types=1);
 
 namespace BrianFaust\Basket\Jurisdictions\Europe;
 
-use Money\Currency;
-use BrianFaust\Basket\Contracts\TaxRate;
 use BrianFaust\Basket\Contracts\Jurisdiction;
+use BrianFaust\Basket\Contracts\TaxRate;
 use BrianFaust\Basket\TaxRates\Europe\SwedenValueAddedTax;
+use Money\Currency;
 
 class Sweden implements Jurisdiction
 {
