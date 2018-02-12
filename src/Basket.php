@@ -13,11 +13,11 @@ declare(strict_types=1);
 
 namespace BrianFaust\Basket;
 
-use Closure;
-use Money\Money;
-use Money\Currency;
 use BrianFaust\Basket\Contracts\Discount;
 use BrianFaust\Basket\Contracts\Jurisdiction;
+use Closure;
+use Money\Currency;
+use Money\Money;
 
 class Basket
 {

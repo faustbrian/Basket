@@ -13,12 +13,12 @@ declare(strict_types=1);
 
 namespace BrianFaust\Basket\Formatters;
 
-use Locale;
-use Money\Money;
-use NumberFormatter;
 use BrianFaust\Basket\Contracts\Formatter;
 use BrianFaust\Basket\Discounts\ValueDiscount;
 use BrianFaust\Basket\Money as MoneyInterface;
+use Locale;
+use Money\Money;
+use NumberFormatter;
 
 class MoneyFormatter implements Formatter
 {
@@ -41,7 +41,7 @@ class MoneyFormatter implements Formatter
     {
         $this->locale = $locale;
 
-        if (! isset(static::$currencies)) {
+        if (!isset(static::$currencies)) {
             static::$currencies = json_read(__DIR__.'/../../resources/data/currencies.json');
         }
     }
